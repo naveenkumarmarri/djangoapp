@@ -1,4 +1,4 @@
 djangoapp
 =========
 
-diving into djanfgo framework
+diving into django framework
