@@ -54,6 +54,7 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 
 TEMPLATE_DIRS = (
         '/home/naveen/django/django_test/templates',
+        '/home/naveen/django/django_test/articles/templates',
     )
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
