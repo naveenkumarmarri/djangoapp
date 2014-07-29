@@ -26,7 +26,14 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_ROOT = ''
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+        ("assets", "/home/naveen/django/django_test/static"),
+
+    )
 # Application definition
 
 INSTALLED_APPS = (
