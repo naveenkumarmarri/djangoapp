@@ -9,13 +9,15 @@
 <body>
 	<div id="page"> 
 	<div id="sidebar">
-		{%block sidebar %}
-		<ul><a href="/articles/all">Articles</ul>
-		<ul><a href="/admin">Admin</ul>
+		{% block sidebar %}
+		<ul>
+			<li><a href="/articles/all">Articles</a></li>
+			<li><a href="/admin">Admin</a></li>
+		</ul>
 		{% endblock %}
 	</div>
 	<div id="content">
-		{% block content %}This is the contenet area{%endblock%}
+		{% block content %}This is the contenet area{% endblock %}
 	</div>
 	</div>
 </body>
