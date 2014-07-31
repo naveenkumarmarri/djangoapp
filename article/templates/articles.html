@@ -1,9 +1,30 @@
-<body>
+{% extends "base.html" %}
+{% block sidebar %}
+<ul>
+	<li><a href="/articles/all">Articles</a></li>
+	<li><a href="/articles/create">Create Article</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<h2>Language is :{{language}}</h2>
+<h2>Session Language is :{{session_language}} </h2>
+{%if articles.count > 0%}
+
 	<h1>Articles</h1>
 	{% for article in articles %}
 	<div>
-		<h2><a href="/articles/get/{{article.id}}/">{{article.title}}</h2>
-		<p>{{article.body}}</p>
+		<h2><a href="/articles/get/{{article.id}}/">{{article.title}}</a></h2>
+		<p>{{article.body | lower |truncatewords:"10"}}</p>
+		{% if article.likes > 1%}
+		<p>{{article.likes}} people liked this article</p>
+		{%elif article.likes == 1 %}
+		<p>{{article.likes}} person liked this</p>
+		{%else%}
+		<p>{{article.likes}} people liked this</p>
+		{%endif%}
 	</div>
 	{%endfor%}
-</body>
+{%else%}
+<p>None to show</p>
+{%endif%}
+{%endblock%}

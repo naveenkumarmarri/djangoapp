@@ -1,0 +1,42 @@
+[
+{
+    "pk": 1, 
+    "model": "article.article", 
+    "fields": {
+        "body": "blah", 
+        "pub_date": "2014-07-29T10:04:19.783Z", 
+        "likes": 2, 
+        "title": "test 1"
+    }
+},
+{
+    "pk": 2, 
+    "model": "article.article", 
+    "fields": {
+        "body": "blah", 
+        "pub_date": "2014-07-29T10:04:35.749Z", 
+        "likes": 0, 
+        "title": "test 2"
+    }
+},
+{
+    "pk": 3, 
+    "model": "article.article", 
+    "fields": {
+        "body": "blah", 
+        "pub_date": "2014-07-29T10:04:44.448Z", 
+        "likes": 0, 
+        "title": "test 3"
+    }
+},
+{
+    "pk": 4, 
+    "model": "article.article", 
+    "fields": {
+        "body": "this is my first article", 
+        "pub_date": "2014-09-16T18:30:00Z", 
+        "likes": 1, 
+        "title": "First Article"
+    }
+}
+]

@@ -1,8 +1,26 @@
-<body>
+{% extends "base.html" %}
+{% block sidebar %}
+<ul>
+	<li><a href="/articles/all">Articles</a></li>
+</ul>
+{%endblock%}
+{% block content %}
 	<h1>
 		{{article.title}}
 	</h1>
 	<p>
 		{{article.body}}
 	</p>
-</body>
+	{% if article.thumbnail %}
+		<p><img src="/static/assets/{{article.thumbnail}}" width="200"/></p>
+	{%endif%}
+
+	{% if article.likes > 1%}
+		<p>{{article.likes}} people liked this article</p>
+		{%elif article.likes == 1 %}
+		<p>{{article.likes}} person liked this</p>
+		{%else%}
+		<p>{{article.likes}} people liked this</p>
+	{%endif%}
+	<p><a href="/articles/like/{{article.id}}/">Like</a></p>
+{%endblock%}

@@ -26,6 +26,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_ROOT = '/home/naveen/django/django_test/static/'
+
 STATIC_ROOT = ''
 
 STATIC_URL = '/static/'
