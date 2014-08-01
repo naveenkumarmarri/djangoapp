@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 
 MEDIA_ROOT = '/home/naveen/django/django_test/static/'
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/assets/'
 
 STATIC_URL = '/static/'
 
